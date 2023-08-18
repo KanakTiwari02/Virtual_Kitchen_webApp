@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  }
+
+  .OuterContainer{
+    position: relative;
+    min-height: 100vh;
+  }
+  body{
+    background-image: url("\kitchenVirtual.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("kitchenVirtual.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5; /* Adjust the opacity value (0.5) as needed */
+    filter: brightness(80%) saturate(120%); /* Adjust the filter values as needed */
+    z-index: -1;
+}
+  
+  .title{
+    color: black;
+    font-size: 50px;
+    margin: 40px auto;
+    margin-top: 11vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 450px;
+    padding: 5px 10px;
+    background-color: rgb(190, 194, 196);
+    text-align: center;
+  }
+  .InnerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+  }
+  .thirdHeading{
+    font-size: 20px;
+    margin: 0;
+    background-color: rgb(190,194,196);
+    border: none;
+    /* width: 100%; */
+  }
+  .footer{
+    font-size: 16px;
+    width: 100%;
+    position: absolute;
+    bottom: 1%;
+    transform: translatex(-50%);
+
+  }
+  .navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar a:hover {
+    background-color: #555;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  /* .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } */
+  
+  /* .dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+  } */
+  
+  /* .dropdown-content a:hover {
+    background-color: #555;
+  } */
+  #home_h1{
+    margin: 20px 0px 40px;
+  }
+  .input-container{
+    margin: auto;
+    width: 60%;
+    margin-top: 100px;
+    border: 2px solid black;
+    background-color: whitesmoke;
+
+  }
+  .container {
+  text-align: center;
+  margin-top: 50px;
+  }
+  
+  .tiles {
+    display: flex;
+    margin-top: 8vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  .tile {
+  width: 20vw;
+  height: 20vw;
+  min-width: 215px;
+  min-height: 215px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.944);
+  margin: 20px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;    
+  }
+  
+  .tile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1; /* Adjust the opacity value as needed */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .tile:hover::before {
+  opacity: 1;
+  }
+  
+  .tile-title {
+    width: 100%;
+    background: #4b4f52;
+    position: relative;
+    z-index: 1;
+    color: rgb(0, 0, 0); /* Ensure the text color is appropriate for visibility */
+  }
+  
+  .tile-title {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  }
+  
+  .tile:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .makeFood{
+    background-image: url("makefood.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .requiredFood{
+  background-image: url("requiredFood.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+  
+  .saveFood{
+  background-image: url("donatefood.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+  .foodExpiry{
+    background-image: url("expiryFood.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+  
+  .popup {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    text-align: center;
+    background-color: #fefefe;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    padding-bottom:40px;
+    border: 1px solid #888;
+    height: auto;
+    overflow: auto;
+    width: 80%;
+    max-width: 400px;
+    max-height: 75%;
+    margin: 0 auto;
+    white-space: pre-line;
+  }
+  
+  .popup-content p {
+    text-transform: capitalize; /* Capitalize first letter of each sentence */
+  }
+  
+  .popup-content span {
+    font-weight: bold; /* Make text before colon bold */
+  }
+  
+  .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  }
+  #textInput,#inputText{
+    color: rgb(0, 0, 0);
+    width: 60%;
+    padding: 10px 0;
+    margin: 30px 0;
+    
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #9eacac;
+    outline: none;
+    background: transparent;
+    
+  }
+  
+  #submitButton{
+  
+    width: auto;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    background: linear-gradient(to right, #000000, #bfc9c9);
+    border: 0;
+    margin: auto;
+    margin-bottom: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid;
+    border-radius: 14px;
+    transition: 0.5s;
+    text-align: center;
+  }
+
+  .playPause{
+    width: 40%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border: 2px solid;
+    border-radius: 14px;
+    background: linear-gradient(to right, #bfc9c9, #000000);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    /* padding: 5px; */
+    transition: 0.5s;
+
+  }
+  .mainContainer{
+    padding: auto;
+    margin: auto;
+    margin-top: 10%;
+  }
+  
+  .loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  }
+  
+  .loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+  }
+  
+  
+  @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+  }
+  
